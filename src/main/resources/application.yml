@@ -1,0 +1,59 @@
+spring:
+  main:
+    banner-mode: "off"
+
+server:
+  port: 8080
+  servlet:
+    context-path: /providers-information
+
+logging:
+  level:
+    ROOT: INFO
+info:
+  appName: providers-information
+  appVersion: 0.0.1
+
+management:
+  server:
+    port: 8444
+    ssl:
+      enabled: true
+      key-store: /vault/secrets/keystore.p12
+      key-alias: keystore
+      key-store-password: dontchangeit
+  endpoints:
+    web:
+      base-path: /actuator
+      exposure:
+        include: info, health, metrics, prometheus
+
+yolt:
+  vault:
+    enabled: true
+    secret:
+      enabled: true
+  commons:
+    error-handling:
+      prefix: PI
+  pi:
+    corePoolSize: 3
+    maxPoolSize: 10
+    queueCapacity: 1
+    awaitTerminationSeconds: 60
+    startScheduler: true
+    readme:
+      scheduleFixedRate: 7200000 # 2 hours
+      baseUrl: https://providers
+      alwaysUseFallback: false
+    jira:
+      scheduleFixedRate: 7200000 # 2 hours
+      baseUrl: https://yolt.atlassian.net
+      alwaysUseFallback: true
+    siteslist:
+      scheduleFixedRate: 7200000 # 2 hours
+      baseUrl: https://providers
+      iconInternalUrl: https://pi.app-prd.yolt.io/providers-information/icon
+      alwaysUseFallback: false
+    content:
+      baseUrl: https://content

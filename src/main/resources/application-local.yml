@@ -1,0 +1,23 @@
+lovebird:
+  shutdownSleepSeconds: 0
+
+management:
+  server:
+    ssl:
+      enabled: false
+
+yolt:
+  vault:
+    secret:
+      enabled: true
+      location: classpath:/secrets_local
+  pi:
+    readme:
+      baseUrl: https://ingress.ycs.team9.yolt.io
+    jira:
+      alwaysUseFallback: false
+    siteslist:
+      baseUrl: https://ingress.ycs.team9.yolt.io
+      iconInternalUrl: http://localhost:8080/providers-information/icon
+    content:
+      baseUrl: https://ingress.ycs.team9.yolt.io

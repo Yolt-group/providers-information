@@ -1,0 +1,16 @@
+[
+    {
+        "siteId": "36130c5f-9024-4a89-91fc-be31fac2f9ec",
+        "provider": "Lloyds",
+        "repository": "providers/bespoke-seba",
+        "countries": ["PL"],
+        "standard": "STET"
+    },
+    {
+        "siteId": "d28b4598-efcf-41c8-8522-08b2744e551a",
+        "provider": "Barclays",
+        "repository": "providers/bespoke-sonia",
+        "countries":["GB", "UK"],
+        "standard": "STET"
+    }
+]

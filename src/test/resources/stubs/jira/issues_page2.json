@@ -1,0 +1,51 @@
+{
+  "request": {
+    "method": "GET",
+    "urlPattern": "/rest/api/3/search.*",
+    "headers": {
+      "Authorization": {
+        "matches": "Basic Y2xpZW50LXNlY3JldC12YWx1ZQ=="
+      },
+      "content-type": {
+        "matches": "application/json"
+      }
+    },
+    "queryParameters" : {
+      "startAt": {
+        "matches": "2"
+      },
+      "fields": {
+        "matches": "components"
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "jsonBody": {
+      "expand": "schema,names",
+      "startAt": 2,
+      "maxResults": 2,
+      "total": 3,
+      "issues": [
+        {
+          "expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields",
+          "id": "55727",
+          "self": "https://yolt.atlassian.net/rest/api/3/issue/55727",
+          "key": "C4PO-7865",
+          "fields": {
+            "components": [
+              {
+                "self": "https://yolt.atlassian.net/rest/api/3/component/10175",
+                "id": "10175",
+                "name": "NewDay"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

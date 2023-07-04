@@ -1,0 +1,47 @@
+{
+  "request": {
+    "method": "GET",
+    "urlPattern": "/providers/sites-details",
+    "headers": {
+      "content-type": {
+        "matches": "application/json"
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "jsonBody": {
+      "aisSiteDetails": [
+        {
+          "id": "7670247e-323e-4275-82f6-87f31119dbd3",
+          "name": "ABN AMRO",
+          "accountTypeWhiteList": [
+            "CURRENT_ACCOUNT"
+          ],
+          "availableCountries": [
+            "NL"
+          ],
+          "providerKey": "ABN_AMRO"
+        },
+        {
+          "id": "38463482-d554-4469-8406-24be13e6ecdc",
+          "name": "AG2R LA MONDIALE",
+          "accountTypeWhiteList": [
+            "CURRENT_ACCOUNT",
+            "SAVINGS_ACCOUNT",
+            "CREDIT_CARD"
+          ],
+          "availableCountries": [
+            "FR"
+          ],
+          "provider": "BUDGET_INSIGHT"
+        }
+      ],
+      "pisSiteDetails": [
+      ]
+    }
+  }
+}

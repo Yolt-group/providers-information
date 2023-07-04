@@ -1,0 +1,12 @@
+[
+    {
+        "siteId": "4c722d03-8238-42f2-ad31-84803c0d3a16",
+        "providerName": "Seba bank",
+        "repository": "providers/bespoke-seba"
+    },
+    {
+        "siteId": "119e48b0-c755-4dc6-bdd1-1dcf57dee525",
+        "providerName": "Sonia bank",
+        "repository": "providers/bespoke-sonia"
+    }
+]

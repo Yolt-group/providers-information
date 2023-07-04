@@ -1,0 +1,36 @@
+spring:
+  main:
+    banner-mode: "off"
+
+yolt:
+  vault:
+    address: https://my-personal-vault.yolt.io
+    auth:
+      service-account-token-file: src/test/resources/test-vault-token.txt
+    secret:
+      enabled: true
+      location: classpath:secrets/
+  commons:
+    error-handling:
+      prefix: PI
+  pi:
+    corePoolSize: 1
+    maxPoolSize: 1
+    queueCapacity: 1
+    awaitTerminationSeconds: 5
+    startScheduler: false
+    siteslist:
+      scheduleFixedRate: 7200000 # 2 hours
+      baseUrl: http://localhost:${wiremock.server.port}
+      iconInternalUrl: http://localhost:${wiremock.server.port}/icon
+      alwaysUseFallback: false
+    content:
+      baseUrl: http://localhost:${wiremock.server.port}/content/
+    jira:
+      scheduleFixedRate: 7200000 # 2 hours
+      baseUrl: http://localhost:${wiremock.server.port}
+      alwaysUseFallback: false
+    readme:
+      scheduleFixedRate: 7200000 # 2 hours
+      baseUrl: http://localhost:${wiremock.server.port}
+      alwaysUseFallback: false

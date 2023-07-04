@@ -1,0 +1,63 @@
+html body {
+  height: 100%;
+  overflow: hidden;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  padding-top: 40px;
+  overflow: hidden;
+}
+
+.rightpanel {
+  overflow-y: scroll;
+  top: 40px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+  overflow-x: hidden;
+}
+
+.leftpanel {
+  padding-right: 0;
+}
+
+.card {
+  margin-bottom: 15px;
+}
+
+.card-link {
+  margin-left: 20px;
+}
+
+.sidenav {
+  overflow-y: scroll;
+  top: 0;
+  height: calc(100vh - 115px);
+  bottom: 0;
+}
+
+.searchbox {
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+
+.table th {
+  position: sticky;
+  top: 0;
+  background: #ffffff;
+  border-top: 0;
+  z-index: 1;
+}
+
+.card-subtitle {
+  margin-top: 1rem;
+  margin-left: 20px;
+}
+
+.empty-link {
+  margin-left: 20px;
+  margin-bottom: 0;
+}

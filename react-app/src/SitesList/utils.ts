@@ -1,0 +1,3 @@
+export const createUrl = (baseUrl: string, logstash: string, siteId: string, cluster: string) => {
+    return baseUrl + "/app/kibana#/discover?_g=(filters:!(),refreshInterval:(pause:!t,value:0),time:(from:now-24h,to:now))&_a=(columns:!(app.message,app.pod,app.user-id,app.provider),filters:!(),index:" + logstash + ",interval:auto,query:(language:lucene,query:'app.cluster:" + cluster + "%20AND%20app.pod.keyword:%22providers%22%20AND%20app.site_id:" + siteId + "'),sort:!('@timestamp',desc))";
+}

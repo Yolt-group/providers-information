@@ -1,0 +1,97 @@
+{
+  "request": {
+    "method": "GET",
+    "urlPattern": "/rest/api/3/search.*",
+    "headers": {
+      "Authorization": {
+        "matches": "Basic Y2xpZW50LXNlY3JldC12YWx1ZQ=="
+      },
+      "content-type": {
+        "matches": "application/json"
+      }
+    },
+    "queryParameters" : {
+      "startAt": {
+        "matches": "0"
+      },
+      "fields": {
+        "matches": "components"
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "jsonBody": {
+      "expand": "schema,names",
+      "startAt": 0,
+      "maxResults": 2,
+      "total": 3,
+      "issues": [
+        {
+          "expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields",
+          "id": "55748",
+          "self": "https://yolt.atlassian.net/rest/api/3/issue/55748",
+          "key": "C4PO-7866",
+          "fields": {
+            "components": [
+              {
+                "self": "https://yolt.atlassian.net/rest/api/3/component/10139",
+                "id": "10139",
+                "name": "N26"
+              }
+            ]
+          }
+        },
+        {
+          "expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields",
+          "id": "48334",
+          "self": "https://yolt.atlassian.net/rest/api/3/issue/48334",
+          "key": "C4PO-7006",
+          "fields": {
+            "components": [
+              {
+                "self": "https://yolt.atlassian.net/rest/api/3/component/10093",
+                "id": "10093",
+                "name": "Bankia",
+                "description": "Bankia"
+              },
+              {
+                "self": "https://yolt.atlassian.net/rest/api/3/component/10094",
+                "id": "10094",
+                "name": "Bankinter",
+                "description": "Bankinter"
+              },
+              {
+                "self": "https://yolt.atlassian.net/rest/api/3/component/10095",
+                "id": "10095",
+                "name": "BBVA",
+                "description": "BBVA"
+              },
+              {
+                "self": "https://yolt.atlassian.net/rest/api/3/component/10096",
+                "id": "10096",
+                "name": "Caixa",
+                "description": "Caixa"
+              },
+              {
+                "self": "https://yolt.atlassian.net/rest/api/3/component/10097",
+                "id": "10097",
+                "name": "Sabadell",
+                "description": "Sabadell"
+              },
+              {
+                "self": "https://yolt.atlassian.net/rest/api/3/component/10098",
+                "id": "10098",
+                "name": "Santander (ES)",
+                "description": "Santander (ES)"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

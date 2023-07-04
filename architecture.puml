@@ -1,0 +1,8 @@
+@startuml
+actor "Yolt Employee" as yolt_employee
+
+[Providers Information Portal] as pip
+
+yolt_employee --> pip
+
+@enduml
